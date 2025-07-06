@@ -3,7 +3,7 @@ module.exports = {
     {
       name: "serverless",
       title:
-        "Serverless & Cloud Computing (type 'proj serverless' for more info)",
+        "☁️ Serverless & Cloud Computing (type 'proj serverless' for more info)",
       description:
         "Initiated and devised serverless functions that creates (and destroy) on-demand EC2 instances.",
       stack: ["Node.js", "AWS Lambdas", "GitLab CI", "Terraform", "MySQL"],
@@ -11,7 +11,7 @@ module.exports = {
     },
     {
       name: "data",
-      title: "Data Engineering (type 'proj data' for more info)",
+      title: "📊 Data Engineering (type 'proj data' for more info)",
       description:
         "Directed a Big Data project (imitating a Lambda architecture). Implemented a data pipeline using Kafka, Spark and Scala.",
       stack: ["Spark", "Kafka", "Scala", "Cassandra", "Java"],
@@ -19,7 +19,7 @@ module.exports = {
     },
     {
       name: "edtech",
-      title: "EdTech project (type 'proj edtech' for more info)",
+      title: "🎓 EdTech project (type 'proj edtech' for more info)",
       description:
         "Operated as a full stack/DevOps engineer in constructing a collaborative tutoring platform for students, hosted on AWS",
       stack: [

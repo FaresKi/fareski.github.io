@@ -1,8 +1,9 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-color: #1e1e1e;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
@@ -11,32 +12,113 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  overflow-wrap: normal;
+  overflow-wrap: break-word;
   overscroll-behavior-y: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.react-terminal {
-  height: 100vh !important;
-  max-height: 100%;
-  max-width: 100%;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.react-terminal-wrapper {
+#root {
+  width: 100vw;
   height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.react-terminal,
+.react-terminal-wrapper {
+  width: 100vw !important;
+  height: 100vh !important;
+  min-width: 100vw;
+  min-height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
   overflow: auto;
   display: flex;
   flex-direction: column;
+  overflow-wrap: break-word;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
 }
 
+section[aria-label="Terminal"] {
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.XTerm {
+  width: 100vw !important;
+  height: 100vh !important;
+  min-width: 100vw;
+  min-height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.terminal.xterm {
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+code {
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
 
 a {
-  color: white
+  color: white;
+}
+
+/* XTerm modern dark theme */
+.xterm {
+  background-color: #181a1b !important;
+  color: #e0e0e0 !important;
+  font-family: "Fira Mono", "Menlo", "Monaco", "Consolas", monospace;
+  font-size: 1.1rem;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  min-width: 100vw !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: none;
+  display: flex;
+}
+
+.xterm .xterm-viewport {
+  border-radius: 12px;
+}
+
+.xterm .xterm-cursor {
+  color: #00ffae !important;
+}
+
+.xterm .xterm-rows {
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .xterm {
+    font-size: 0.95rem;
+    padding: 12px 2px;
+    height: 60vh;
+    max-width: 100vw;
+  }
+}
+
+/* Modern scrollbar */
+.xterm .xterm-viewport::-webkit-scrollbar {
+  width: 8px;
+  background: #23272a;
+}
+.xterm .xterm-viewport::-webkit-scrollbar-thumb {
+  background: #444b53;
+  border-radius: 8px;
 }
